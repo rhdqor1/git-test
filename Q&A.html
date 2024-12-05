@@ -13,7 +13,7 @@
             <nav class="nav">
                 <ul>
                     <li><a href="test.html">홈</a></li>
-                    <li><a href="company.html" class="active">공지사항</a></li>
+                    <li><a href="/company.html" class="active">공지사항</a></li>
                     <li><a href="Q&A.html">고객지원</a></li>
                 </ul>
             </nav>
@@ -32,17 +32,69 @@
             <tbody>
                 <tr>
                     <td>2</td>
-                    <td><a href="#">예약주차장 이용기준 변경안내</a></td>
+                    <td><a href="#">질문2</a></td>
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td><a href="#">주차 시스템안내</a></td>
+                    <td><a href="#">질문1</a></td>
+                </tr>
             </tbody>
         </table>
     </section>
 
     <footer>
-        <p>© 2024 광주일렉콤. All rights reserved.</p>
+        <p>© 2024 광주일렉콤.</p>
     </footer>
 </body>
-</html>
+
+
+    </html> 
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+</head>
+<body>
+    <button class="inquiry-btn" id="openModal">질문하기</button>
+    
+    <div class="modal" id="inquiryModal">
+        <div class="modal-content">
+            <h3>문의하기</h3>
+            <form id="inquiryForm">
+                <div class="form-group">
+                    <label for="name">연락처</label>
+                    <input type="text" id="name" name="name" placeholder="연락처를 입력하세요" required>
+                    
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required>
+                    <span id="emailError" style="color: red; display: none;">바르지 않은 이메일 형식입니다.</span>
+                </div>
+                <div class="form-group">
+                    <label for="inquiryType">문의 구분:</label>
+                    <select id="inquiryType" name="inquiryType" required>
+                        <option value="" disabled selected>문의 유형을 선택하세요</option>
+                        <option value="general">일반 문의</option>
+                        <option value="technical">기술 지원</option>
+                        <option value="billing">결제 문의</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="subject">제목:</label>
+                    <input type="text" id="subject" name="subject" placeholder="제목을 입력하세요" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">내용:</label>
+                    <textarea id="message" name="message" placeholder="문의 내용을 입력하세요" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="attachment">첨부파일:</label>
+                    <input type="file" id="attachment" name="attachment">
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn-confirm" id="confirmBtn">확인</button>
+                    <button type="button" class="btn-cancel" id="cancelBtn">취소</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="/Q&A.js"></script> </body>

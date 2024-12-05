@@ -39,26 +39,6 @@ body {
     text-decoration: underline;
 }
 
-/* 배너 스타일 */
-.banner {
-    position: relative;
-    background: url('banner-image.jpg') no-repeat center center/cover;
-    height: 300px;
-    color: white;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.banner-text h1 {
-    font-size: 36px;
-    margin: 0;
-}
-
-.banner-text p {
-    font-size: 20px;
-}
 
 /* 공지사항 테이블 스타일 */
 .notice {
@@ -111,4 +91,13 @@ footer {
     padding: 10px 0;
     background-color: #f4f4f4;
     margin-top: 20px;
+}
+
+.notice-detail {
+    border: 2px solid #000; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin: 20px auto; 
+    background-color: #f9f9f9;  
+    text-align: center; 
 }
